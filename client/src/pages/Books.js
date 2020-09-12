@@ -10,9 +10,9 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 class Books extends Component {
   state = {
     books: [],
-    title: "",
-    author: "",
-    synopsis: ""
+    name: "",
+    languages: "",
+    about: ""
   };
 
   componentDidMount() {
@@ -22,7 +22,7 @@ class Books extends Component {
   loadBooks = () => {
     API.getBooks()
       .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+        this.setState({ books: res.data, name: "", languages: "", about: "" })
       )
       .catch(err => console.log(err));
   };
@@ -42,11 +42,11 @@ class Books extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.title && this.state.author) {
+    if (this.state.name && this.state.languages) {
       API.saveBook({
-        title: this.state.title,
-        author: this.state.author,
-        synopsis: this.state.synopsis
+        name: this.state.name,
+        languages: this.state.languages,
+        about: this.state.about
       })
         .then(res => this.loadBooks())
         .catch(err => console.log(err));
@@ -59,38 +59,38 @@ class Books extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>Sign up below to be a coding mentor!</h1>
             </Jumbotron>
             <form>
               <Input
-                value={this.state.title}
+                value={this.state.name}
                 onChange={this.handleInputChange}
-                name="title"
-                placeholder="Title (required)"
+                name="name"
+                placeholder="Full Name (required)"
               />
               <Input
-                value={this.state.author}
+                value={this.state.languages}
                 onChange={this.handleInputChange}
-                name="author"
-                placeholder="Author (required)"
+                name="languages"
+                placeholder="Coding languages you would like to teach (required)"
               />
               <TextArea
-                value={this.state.synopsis}
+                value={this.state.about}
                 onChange={this.handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
+                name="about"
+                placeholder="Professionl information about yourself (Optional - please add your email if you would like to be contacted by a student)"
               />
               <FormBtn
-                disabled={!(this.state.author && this.state.title)}
+                disabled={!(this.state.languages && this.state.name)}
                 onClick={this.handleFormSubmit}
               >
-                Submit Book
+                Submit
               </FormBtn>
             </form>
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h1>Mentor List</h1>
             </Jumbotron>
             {this.state.books.length ? (
               <List>
@@ -98,7 +98,7 @@ class Books extends Component {
                   <ListItem key={book._id}>
                     <Link to={"/books/" + book._id}>
                       <strong>
-                        {book.title} by {book.author}
+                        {book.name} language expertise in: {book.languages}
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteBook(book._id)} />

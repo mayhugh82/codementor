@@ -98,7 +98,7 @@ class Books extends Component {
                   <ListItem key={book._id}>
                     <Link to={"/books/" + book._id}>
                       <strong>
-                        {book.name} language expertise in: {book.languages}
+                        Name: {book.name} <br></br>  Languages: {book.languages} <br></br>
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteBook(book._id)} />

@@ -78,7 +78,7 @@ class Books extends Component {
                 value={this.state.about}
                 onChange={this.handleInputChange}
                 name="about"
-                placeholder="Professionl information about yourself (Optional - please add your email if you would like to be contacted by a student)"
+                placeholder="Professional information about yourself (Optional - please add your email if you would like to be contacted by a student)"
               />
               <FormBtn
                 disabled={!(this.state.languages && this.state.name)}

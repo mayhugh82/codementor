@@ -29,7 +29,7 @@ const bookSeed = [
       " React",
     ],
     about:
-      "I value teaching my students above all things.  When I was asked how I find time for my wife and sweet puppy Charlie I replied “those things are unimportant in life!”  Message me at: I will always make you a priority! jim@mycastle.com",
+      "I value teaching my students above all things.  When I was asked how I find time for my wife and sweet puppy Charlie I replied “those things are unimportant in life!” I will always make you a priority! Message me at: jim@mycastle.com",
   },
   {
     name: "Curtis Lane",
@@ -73,13 +73,35 @@ const bookSeed = [
   },
   {
     name: "Julian Villalba",
-    languages: [" HTML", " ,", " Javascript", " ,", " JQuery"],
+    languages: [
+      " HTML",
+      " ,",
+      " Javascript",
+      " ,",
+      " JQuery",
+      " ,",
+      " Node.js",
+      " ,",
+      " SQL",
+    ],
     about:
       "I enjoy mentoring students about the coding world when I am not doctoring.  I am super friendly and always happy to help! Message me at: Dr.V@swollenhand.com",
   },
   {
     name: "Dana Nobile",
-    languages: [" HTML", " ,", " CSS", " ,", " Javascript", " ,", " JQuery"],
+    languages: [
+      " HTML",
+      " ,",
+      " CSS",
+      " ,",
+      " Javascript",
+      " ,",
+      " JQuery",
+      " ,",
+      " Node.js",
+      " ,",
+      " SQL",
+    ],
     about:
       "I am a front end expert!  I will help you get that fabulous looking and perfectly functioning website you have always wanted.  I might even throw in a free yoga lesson if you do a good job! Message me at: Dana@dogmom.com",
   },

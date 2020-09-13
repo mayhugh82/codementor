@@ -23,7 +23,7 @@ class Detail extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1>
-                {this.state.book.name} language expertise in:{" "}
+                {this.state.book.name} has language expertise in:{" "}
                 {this.state.book.languages}
               </h1>
             </Jumbotron>

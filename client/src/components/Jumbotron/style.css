@@ -1,20 +1,8 @@
-/* .jumbotron {
-    height: 300;
-    clear: both;
-    padding-top: 120;
-    text-align: center;
-    background-image: ; 
-    background-size: cover;
-    display: flex;
-    justifyContent: center */
-
-
 .jumbotron {
     background-image: linear-gradient(rgba(245, 241, 241, 0.5), rgba(250, 248, 248, 0.5)), url("./coder.jpg") ;
     height: 300;
     clear: both;
     padding-top: 120;
-    
     text-align: center;
     background-position: top;
     background-repeat: no-repeat;
@@ -22,7 +10,6 @@
     position: relative;
     display: flex;
     justify-content: center;
-    /* margin: auto; */
     object-fit: cover;
     overflow: hidden;
     color: #2A878C;

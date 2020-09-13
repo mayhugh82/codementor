@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-// This file empties the Books collection and inserts the books below
+// This file empties the Mentors collection and inserts the books below
 
 mongoose.connect(
   process.env.MONGODB_URI ||
   "mongodb://localhost/reactreadinglist"
 );
 
-const bookSeed = [
+const mentorSeed = [
   {
     name: "Jim Dhima",
     languages: [
@@ -161,9 +161,9 @@ const bookSeed = [
   },
 ];
 
-db.Book
+db.Mentor
   .remove({})
-  .then(() => db.Book.collection.insertMany(bookSeed))
+  .then(() => db.Mentor.collection.insertMany(mentorSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

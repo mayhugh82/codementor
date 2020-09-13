@@ -6,13 +6,12 @@ import API from "../utils/API";
 
 class Detail extends Component {
   state = {
-    book: {}
+    mentors: {}
   };
-  // When this component mounts, grab the book with the _id of this.props.match.params.id
-  // e.g. localhost:3000/books/599dcb67f0f16317844583fc
+  // When this component mounts, grab the mentors with the _id of this.props.match.params.id
   componentDidMount() {
-    API.getBook(this.props.match.params.id)
-      .then(res => this.setState({ book: res.data }))
+    API.getMentors(this.props.match.params.id)
+      .then(res => this.setState({ mentors: res.data }))
       .catch(err => console.log(err));
   }
 
@@ -23,8 +22,8 @@ class Detail extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1>
-                {this.state.book.name} has language expertise in:{" "}
-                {this.state.book.languages}
+                {this.state.mentors.name} has language expertise in:{" "}
+                {this.state.mentors.languages}
               </h1>
             </Jumbotron>
           </Col>
@@ -33,7 +32,7 @@ class Detail extends Component {
           <Col size="md-10 md-offset-1">
             <article>
               <h1 style={{ color: "#2A878C" }}>About</h1>
-              <p>{this.state.book.about}</p>
+              <p>{this.state.mentors.about}</p>
             </article>
           </Col>
         </Row>

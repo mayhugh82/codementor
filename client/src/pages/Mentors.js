@@ -6,44 +6,43 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
-class Books extends Component {
+class Mentors extends Component {
   state = {
-    books: [],
+    mentors: [],
     name: "",
     languages: "",
-    about: ""
+    about: "",
   };
 
   componentDidMount() {
-    this.loadBooks();
+    this.loadMentors();
   }
 
-  loadBooks = () => {
-    API.getBooks()
-      .then(res =>
-        this.setState({ books: res.data, name: "", languages: "", about: "" })
+  loadMentors = () => {
+    API.getMentors()
+      .then((res) =>
+        this.setState({ mentors: res.data, name: "", languages: "", about: "" })
       )
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   };
 
-  
-  handleInputChange = event => {
+  handleInputChange = (event) => {
     const { name, value } = event.target;
     this.setState({
-      [name]: value
+      [name]: value,
     });
   };
 
-  handleFormSubmit = event => {
+  handleFormSubmit = (event) => {
     event.preventDefault();
     if (this.state.name && this.state.languages) {
-      API.saveBook({
+      API.saveMentor({
         name: this.state.name,
         languages: this.state.languages,
-        about: this.state.about
+        about: this.state.about,
       })
-        .then(res => this.loadBooks())
-        .catch(err => console.log(err));
+        .then((res) => this.loadMentors())
+        .catch((err) => console.log(err));
     }
   };
 
@@ -86,13 +85,14 @@ class Books extends Component {
             <Jumbotron>
               <h1>Mentor List</h1>
             </Jumbotron>
-            {this.state.books.length ? (
+            {this.state.mentors.length ? (
               <List>
-                {this.state.books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
+                {this.state.mentors.map((mentor) => (
+                  <ListItem key={mentor._id}>
+                    <Link to={"/mentors/" + mentor._id}>
                       <strong>
-                        Name: {book.name} <br></br>  Languages: {book.languages} <br></br>
+                        Name: {mentor.name} <br></br> Languages: {mentor.languages}{" "}
+                        <br></br>
                       </strong>
                     </Link>
                   </ListItem>
@@ -108,4 +108,4 @@ class Books extends Component {
   }
 }
 
-export default Books;
+export default Mentors;

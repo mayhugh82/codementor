@@ -6,12 +6,12 @@ import API from "../utils/API";
 
 class Detail extends Component {
   state = {
-    mentors: {}
+    mentor: {}
   };
   // When this component mounts, grab the mentors with the _id of this.props.match.params.id
   componentDidMount() {
-    API.getMentors(this.props.match.params.id)
-      .then(res => this.setState({ mentors: res.data }))
+    API.getMentor(this.props.match.params.id)
+      .then(res => this.setState({ mentor: res.data }))
       .catch(err => console.log(err));
   }
 
@@ -22,8 +22,8 @@ class Detail extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1>
-                {this.state.mentors.name} has language expertise in:{" "}
-                {this.state.mentors.languages}
+                {this.state.mentor.name} has language expertise in:{" "}
+                {this.state.mentor.languages}
               </h1>
             </Jumbotron>
           </Col>
@@ -32,7 +32,7 @@ class Detail extends Component {
           <Col size="md-10 md-offset-1">
             <article>
               <h1 style={{ color: "#2A878C" }}>About</h1>
-              <p>{this.state.mentors.about}</p>
+              <p>{this.state.mentor.about}</p>
             </article>
           </Col>
         </Row>

@@ -2,13 +2,15 @@
 A full stack software application that helps you find a coding mentor near you. 
 
 ## 📝 Description 📝
-The goal of this app is to help new coders find a mentor to help them in whatever programming language they are interested in 
+The goal of this app is to help new coders find a mentor to help them in whatever programming language they are interested in learning and further develop their skills. The application is a full MERN stack application. 
 
-## 🍴 Forking Instructions 🍴
+* For access on [Heroku](https://geeksandfreaks.herokuapp.com/)
+* [Github Repository](https://github.com/mayhugh82/codementor)
+
+## 💾 Installation 💾	
 1. Click on the top right and fork. Choose wether you would like to contribute or just use for your own purposes. 
 2. Choose your file location and open in VS code. 
-3. Open your terminal and run ``` npm i ``` for all node packages 
-4. Once packages are installed, you can now open through your localhost port by running in the terminal ``` npm run client ``` 
+3.	Run `npm i` to install the dependencies. 
 
 ## 🍃 Deployment on Heroku with MongoDB Atlas 🍃 
 * Creating the Database :
@@ -82,9 +84,8 @@ Next and last, you'll update the application's code to accommodate the MongoDB c
         - express
         - mongoose
         - axios
-        - dotenv
 
-* 👾 [Robo 3T](https://robomongo.org/)
+* 👾 [Mongo DB Atlas](https://www.mongodb.com/cloud/atlas/lp/try2?utm_source=google&utm_campaign=gs_americas_united_states_search_brand_atlas_desktop&utm_term=mongodb%20atlas&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=1718986498&gclid=CjwKCAjw74b7BRA_EiwAF8yHFFgNMIo951w5-vZd0DkiYQDs5rMyd6qmBedpZ_wUTjP886NonJ3aqRoCxIQQAvD_BwE)
 * 👾 [jQuery](https://jquery.com/)
 * 👾 [JavaScript](https://www.javascript.com/)
 * 👾 [HTML](https://www.w3schools.com/html/)
@@ -96,3 +97,10 @@ Next and last, you'll update the application's code to accommodate the MongoDB c
 * 💻 To create [Favicons](https://favicon.io/emoji-favicons/nerd-face/)
 * 💻 Webpage inspired by [CodeMentor](https://www.codementor.io/tutors) and 
 * 💻 On how implement [MongoDB Atlas](https://www.mongodb.com/blog/post/integrating-mongodb-atlas-with-heroku-private-spaces) on Heroku
+
+# 🖊️ Authors 🖊️ 
+* 👩‍💻  [Dana Nobile](https://github.com/DanaNobile) 
+* 👩‍💻  [Diana Mayhugh](https://github.com/mayhugh82)
+* 👨‍💻  [Anthony Carmack](https://github.com/InvNO1247)
+* 👨‍💻  [Andy Edstrom](https://github.com/andree15)
+* 👩‍💻  [Jacqueline Geiger](https://github.com/jcqlng)
